@@ -1675,7 +1675,7 @@
   function switchView(v, opts) {
     ui.view = v;
     const fabEl = $('#fabAdd');
-    if (fabEl) fabEl.classList.toggle('hidden', ['calendar', 'today', 'bookings'].indexOf(v) < 0);
+    if (fabEl) fabEl.classList.toggle('hidden', ['settings', 'finder'].indexOf(v) >= 0);
     ['calendar', 'today', 'bookings', 'finder', 'confirm', 'settings'].forEach((k) => {
       const id = '#view' + k.charAt(0).toUpperCase() + k.slice(1);
       const el = $(id);
