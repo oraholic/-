@@ -1,0 +1,12 @@
+{
+  "name": "oraholic-guesthouse-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "오라홀릭 게스트하우스 관리 앱 자동 테스트 (jsdom)",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "jsdom": "^22.1.0"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>오라홀릭 게스트하우스 관리</title>
+<meta name="description" content="세부 오라홀릭 게스트하우스 A·B·C·D 4채의 예약·캘린더·보증금·공동 운영을 관리하는 앱">
+<meta name="theme-color" content="#0E6E6A">
+<meta name="color-scheme" content="light">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="오라홀릭">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-mark" src="./icon.svg" alt="" width="42" height="42">
+      <div class="brand-text">
+        <h1>오라홀릭<span class="bh-more"> 게스트하우스</span></h1>
+        <p>세부 · 4채 운영 관리</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button type="button" id="syncBadge" class="sync-badge off" title="동기화 설정 열기" aria-label="동기화 상태">
+        <i class="dot" aria-hidden="true"></i><span id="syncBadgeText">로컬 저장만 사용 중</span>
+      </button>
+      <button type="button" id="operatorBtn" class="operator-btn" title="작업자 바꾸기" aria-label="작업자 바꾸기">
+        <span class="op-face" aria-hidden="true">👤</span>
+        <span id="operatorName">사장님</span>
+        <span class="caret" aria-hidden="true">▾</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="주요 화면">
+    <button type="button" data-view="calendar" class="active">📅 캘린더</button>
+    <button type="button" data-view="today">☀️ 오늘 운영</button>
+    <button type="button" data-view="bookings">📋 예약</button>
+    <button type="button" data-view="finder">💬 손님 안내</button>
+    <button type="button" data-view="confirm">🖼 확정서</button>
+    <button type="button" data-view="settings">⚙️ 설정</button>
+  </nav>
+
+  <main class="main">
+    <section id="viewCalendar" class="view"></section>
+    <section id="viewToday" class="view hidden"></section>
+    <section id="viewBookings" class="view hidden"></section>
+    <section id="viewFinder" class="view hidden"></section>
+    <section id="viewConfirm" class="view hidden"></section>
+    <section id="viewSettings" class="view hidden"></section>
+  </main>
+
+  <button type="button" id="fabAdd" class="fab" aria-label="새 예약 추가">＋ <span>예약 추가</span></button>
+</div>
+
+<div id="sheetRoot"></div>
+<div id="toastRoot" class="toast-root" aria-live="polite"></div>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+
+<script src="./confirmation.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

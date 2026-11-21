@@ -1,0 +1,21 @@
+{
+  "name": "오라홀릭 게스트하우스 관리",
+  "short_name": "오라홀릭",
+  "description": "세부 오라홀릭 게스트하우스 A·B·C·D 4채의 예약·캘린더·보증금·공동 운영 관리",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#F7F4EE",
+  "theme_color": "#0E6E6A",
+  "categories": ["business", "productivity", "travel"],
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
